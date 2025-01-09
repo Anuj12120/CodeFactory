@@ -7,4 +7,6 @@ target 'CodeFactory' do
 
   # Pods for CodeFactory
 
+  pod 'IQKeyboardManagerSwift'
+  
 end
