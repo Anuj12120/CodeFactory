@@ -17,13 +17,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         IQKeyboardManager.shared.isEnabled = true
         IQKeyboardManager.shared.enableAutoToolbar = true
-        self.loadOnBoradingView()
+        self.showAppropriateView()
         return true
+    }
+    
+    //MARK: - showAppropriateView
+    func showAppropriateView(){
+        let value = VVBaseUserDefaults.getStringForKey(KEY_ONBORADING)
+        
+        if(!value.isEmpty){
+            self.loadLoginView()
+        }else{
+            self.loadOnBoradingView()
+        }
     }
     
     //MARK: - loadOnBoradingView
     func loadOnBoradingView(){
         let objController = OnBoradingViewController.init(nibName: "OnBoradingViewController", bundle: nil)
+        let navigationController = UINavigationController(rootViewController: objController)
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
+    }
+    
+    //MARK: - loadLoginView
+    func loadLoginView(){
+        let objController = LoginViewController.init(nibName: "LoginViewController", bundle: nil)
         let navigationController = UINavigationController(rootViewController: objController)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()

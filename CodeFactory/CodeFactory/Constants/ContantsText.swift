@@ -23,3 +23,14 @@ let PAGE_CONTROL_THIRD_DESC = "Unlock your potential with Improve Your Skills, o
 ///#Login Screen
 let LOGIN = "Log in"
 let LOGIN_DESCRIPTION = "Login with social networks"
+let FORGOT_PASS = "Forgot Password?"
+let SIGNUP = "Sign up"
+let EMAIL = "Email"
+let PASSWORD = "Password"
+
+
+
+
+
+//MARK: - FOR APP CONSTANTS
+let KEY_ONBORADING = "onboarding_key"

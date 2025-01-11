@@ -117,7 +117,9 @@ class OnBoradingViewController: UIViewController {
         CURRENT_PAGE = CURRENT_PAGE + 1
         
         if(CURRENT_PAGE >= 3){
+            VVBaseUserDefaults.setString("YES", forKey: KEY_ONBORADING)
             ///#REDIRECT TO LOGIN SCEEN
+            self.loadLoginView()
             return
         }else if CURRENT_PAGE == 2 {
             self.setButtonTitle(title: LET_START)
@@ -129,5 +131,11 @@ class OnBoradingViewController: UIViewController {
         self.pageControl.currentPage = CURRENT_PAGE
         
         self.showAppropriateChildViewController(isComeFrom: CURRENT_PAGE)
+    }
+    
+    //MARK: - loadLoginView
+    func loadLoginView(){
+        let objController = LoginViewController.init(nibName: "LoginViewController", bundle: nil)
+        self.navigationController?.pushViewController(objController, animated: true)
     }
 }

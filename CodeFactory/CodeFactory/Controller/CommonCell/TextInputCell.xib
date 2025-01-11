@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="72" id="KGk-i7-Jjw" customClass="TextInputCell" customModule="CodeFactory" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HVW-8x-7Ga">
+                        <rect key="frame" x="16" y="8" width="288" height="56"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0vd-0I-VeD">
+                                <rect key="frame" x="12" y="10" width="236" height="36"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hse-uY-2qd">
+                                <rect key="frame" x="252" y="16" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="SO7-qE-G9X"/>
+                                    <constraint firstAttribute="height" constant="24" id="g6B-yv-Y8G"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="ic_hide_pass"/>
+                                <state key="selected" image="ic_show_pass"/>
+                                <connections>
+                                    <action selector="clickHideShowPasswordBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="OhJ-bM-FlT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="0vd-0I-VeD" secondAttribute="bottom" constant="10" id="Mdv-ig-tvT"/>
+                            <constraint firstAttribute="height" constant="56" id="Y2m-VI-Tcq"/>
+                            <constraint firstItem="Hse-uY-2qd" firstAttribute="centerY" secondItem="HVW-8x-7Ga" secondAttribute="centerY" id="bCz-EY-Bua"/>
+                            <constraint firstItem="0vd-0I-VeD" firstAttribute="top" secondItem="HVW-8x-7Ga" secondAttribute="top" constant="10" id="eKM-J6-VRg"/>
+                            <constraint firstItem="Hse-uY-2qd" firstAttribute="leading" secondItem="0vd-0I-VeD" secondAttribute="trailing" constant="4" id="qRx-p3-KLB"/>
+                            <constraint firstItem="0vd-0I-VeD" firstAttribute="leading" secondItem="HVW-8x-7Ga" secondAttribute="leading" constant="12" id="woK-Wj-Pqk"/>
+                            <constraint firstAttribute="trailing" secondItem="Hse-uY-2qd" secondAttribute="trailing" constant="12" id="yxn-V6-xzV"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="HVW-8x-7Ga" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="1er-JA-q12"/>
+                    <constraint firstItem="HVW-8x-7Ga" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="9bV-ex-gHm"/>
+                    <constraint firstAttribute="bottom" secondItem="HVW-8x-7Ga" secondAttribute="bottom" constant="8" id="CMO-aq-q2b"/>
+                    <constraint firstAttribute="trailing" secondItem="HVW-8x-7Ga" secondAttribute="trailing" constant="16" id="cHO-25-JQD"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="btnHideShowPass" destination="Hse-uY-2qd" id="Ys3-Vw-dPw"/>
+                <outlet property="txtEnterDetails" destination="0vd-0I-VeD" id="BBa-nw-v4W"/>
+                <outlet property="vwTextInput" destination="HVW-8x-7Ga" id="hxj-si-rBV"/>
+            </connections>
+            <point key="canvasLocation" x="129.7709923664122" y="9.1549295774647899"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_hide_pass" width="24" height="24.333333969116211"/>
+        <image name="ic_show_pass" width="24" height="24.333333969116211"/>
+    </resources>
+</document>

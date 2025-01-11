@@ -24,13 +24,22 @@ extension LoginViewController: UITableViewDelegate, UITableViewDataSource {
             cell?.configureShowLoginImage()
             cell?.selectionStyle = .none
             return cell!
-        }else{
+        }else if (indexPath.row == 3){
             var cell: LoginDetailCell? = tableView.dequeueReusableCell(withIdentifier: "LoginDetailCell") as! LoginDetailCell?
             if cell == nil {
                 let topLevelObjects: [Any] = Bundle.main.loadNibNamed("LoginDetailCell", owner: self, options: nil)!
                 cell = (topLevelObjects[0] as? LoginDetailCell)
             }
             cell?.configureLoginDetailCell()
+            cell?.selectionStyle = .none
+            return cell!
+        }else{
+            var cell: TextInputCell? = tableView.dequeueReusableCell(withIdentifier: "TextInputCell") as! TextInputCell?
+            if cell == nil {
+                let topLevelObjects: [Any] = Bundle.main.loadNibNamed("TextInputCell", owner: self, options: nil)!
+                cell = (topLevelObjects[0] as? TextInputCell)
+            }
+            cell?.configureEmailPassswordCell(currentIndxPath: indexPath)
             cell?.selectionStyle = .none
             return cell!
         }

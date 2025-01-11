@@ -9,7 +9,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    
+    @IBOutlet var vwHeader: UIView!
     @IBOutlet weak var btnLogin: UIButton!
     @IBOutlet weak var btnSignUp: UIButton!
     @IBOutlet weak var btnForgotPassword: UIButton!
@@ -28,7 +28,13 @@ class LoginViewController: UIViewController {
     //MARK: - loadInitialSettings
     func loadInitialSettings(){
         self.view.backgroundColor = UICOLOR_APP_BACKGROUND_COLOR
-        
+        ///Design Button
+        Utility.designAppButton(button: self.btnLogin, title: LOGIN)
+        Utility.designAppButton(button: self.btnSignUp, titleClr: UICOLOR_BLACK, backClr: .clear, title: SIGNUP)
+        Utility.designAppButton(button: self.btnForgotPassword, titleClr: UICOLOR_BLACK, backClr: .clear, title: FORGOT_PASS)
+        //Setup Header view 
+        self.tableView.tableHeaderView = self.vwHeader
+        //Setup Footer view
         self.tableView.tableFooterView = self.vwFooter
     }
 

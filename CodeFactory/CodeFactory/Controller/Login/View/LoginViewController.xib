@@ -16,6 +16,7 @@
                 <outlet property="tableView" destination="Wq6-gJ-Cz9" id="g7a-zB-afL"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="vwFooter" destination="Cvb-qr-l6P" id="AAG-7H-mBK"/>
+                <outlet property="vwHeader" destination="2Lc-3a-25Y" id="L0y-pz-v6d"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -97,6 +98,16 @@
             <nil key="simulatedTopBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="872.51908396946567" y="-253.52112676056339"/>
+        </view>
+        <view contentMode="scaleToFill" id="2Lc-3a-25Y">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="54"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <viewLayoutGuide key="safeArea" id="7Bo-HB-VVJ"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="873" y="-125"/>
         </view>
     </objects>
     <resources>
