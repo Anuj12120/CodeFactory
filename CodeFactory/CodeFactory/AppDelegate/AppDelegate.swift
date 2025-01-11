@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,14 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        self.loadUserDetailsView()
+        IQKeyboardManager.shared.isEnabled = true
+        IQKeyboardManager.shared.enableAutoToolbar = true
+        self.loadOnBoradingView()
         return true
     }
     
-    //MARK: - loadUserDetailsView
-    func loadUserDetailsView(){
-        let objController = UserDetailsViewController.init(nibName: "UserDetailsViewController", bundle: nil)
+    //MARK: - loadOnBoradingView
+    func loadOnBoradingView(){
+        let objController = OnBoradingViewController.init(nibName: "OnBoradingViewController", bundle: nil)
         let navigationController = UINavigationController(rootViewController: objController)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
