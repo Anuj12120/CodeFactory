@@ -10,13 +10,22 @@ import UIKit
 class PageControlFirstViewController: BaseViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet var vwHeader: UIView!
     
     var isComeFrom: Int = 0
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        let tableViewHeight = self.tableView.frame.height
+        let contentHeight = self.tableView.contentSize.height
+        
+        let centeringInset = (tableViewHeight - contentHeight) / 2.0
+        let topInset = max(centeringInset, 0.0)
+        
+        self.tableView.contentInset = UIEdgeInsets(top: topInset, left: 0.0, bottom: 0.0, right: 0.0)
     }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,7 +37,6 @@ class PageControlFirstViewController: BaseViewController {
     func loadInitialSettings(){
         self.view.backgroundColor = UICOLOR_APP_BACKGROUND_COLOR
         
-        self.tableView.tableHeaderView = self.vwHeader
     }
     
     //MARK: - tableReload

@@ -6,6 +6,11 @@
 //
 
 import Foundation
+import UIKit
+
+let UIAppDelegate = UIApplication.shared.delegate as! AppDelegate
+
+
 
 ///#OnBoarding Screen
 let LET_START = "Let’s Start"
@@ -32,7 +37,15 @@ let PASSWORD = "Password"
 let SIGNUP_DESCRIPTION = "Create your account"
 let NAME = "Name"
 
+///#TabBar
+let COURSES = "Courses"
+let  PROFILE = "Profile"
+let SETTINS = "Settings"
 
+
+///#Courses Screen
+
+let YOUR_COURSES = "Your Courses"
 
 //MARK: - FOR APP CONSTANTS
 let KEY_ONBORADING = "onboarding_key"

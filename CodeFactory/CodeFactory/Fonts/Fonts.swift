@@ -33,3 +33,5 @@ let UICOLOR_BUTTON_COLOR = UIColor(red: 0.89, green: 0.34, blue: 0.16, alpha: 1.
 let UICOLOR_BLUE_COLOR = UIColor(red: 0.40, green: 0.67, blue: 0.92, alpha: 1.00)
 let UICOLOR_LIGHT_GRAY_COLOR = UIColor(red: 0.84, green: 0.83, blue: 0.83, alpha: 1.00)
 let UICOLOR_GRAY_COLOR = UIColor(red: 0.55, green: 0.55, blue: 0.55, alpha: 1.00)
+let UICOLOR_TABAR_COLOR = UIColor(red: 0.75, green: 0.73, blue: 0.70, alpha: 1.00)
+let UICOLOR_ORANGE_COLOR = UIColor(red: 0.89, green: 0.34, blue: 0.16, alpha: 1.00)
