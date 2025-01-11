@@ -24,7 +24,7 @@ extension LoginViewController: UITableViewDelegate, UITableViewDataSource {
             cell?.configureShowLoginImage()
             cell?.selectionStyle = .none
             return cell!
-        }{
+        }else{
             var cell: LoginDetailCell? = tableView.dequeueReusableCell(withIdentifier: "LoginDetailCell") as! LoginDetailCell?
             if cell == nil {
                 let topLevelObjects: [Any] = Bundle.main.loadNibNamed("LoginDetailCell", owner: self, options: nil)!
