@@ -43,4 +43,8 @@ class ShowImageCell: UITableViewCell {
         self.imgIcon.image = UIImage(named: "ic_login")
     }
     
+    func configureShowSignUpImage(){
+        self.imgIcon.image = UIImage(named: "ic_signup")
+    }
+    
 }

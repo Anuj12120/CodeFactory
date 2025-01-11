@@ -32,6 +32,8 @@ class TextInputCell: UITableViewCell {
         self.txtEnterDetails.font = OpanSansRegular_Size15
         self.txtEnterDetails.textColor = UICOLOR_BLACK
         self.txtEnterDetails.tintColor =  UICOLOR_BLACK
+        
+        self.btnHideShowPass.isHidden = true
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -40,14 +42,74 @@ class TextInputCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    //MARK: - configureSignUpDetails
+    func configureSignUpDetails(currentIndxPath: IndexPath){
+        self.currentIndxPath = currentIndxPath
+        switch currentIndxPath.row {
+        case 2:
+            self.designSignUpNameCell()
+            break
+        case 3:
+            self.designSignUpEmailCell()
+            break
+        case 4:
+            self.designSignUpPasswordCell()
+            break
+        default:
+            break
+        }
+    }
+    
+    //MARK: - designSignUpNameCell
+    func designSignUpNameCell(){
+        self.txtEnterDetails.keyboardType = .emailAddress
+        self.txtEnterDetails.attributedPlaceholder = NSAttributedString(string: NAME, attributes: attributes)
+        self.txtEnterDetails.addTarget(self, action: #selector(self.enterSignUpName(_:)),for: .editingChanged)
+    }
+    
+    //MARK: - designSignUpEmailCell
+    func designSignUpEmailCell(){
+        
+        self.txtEnterDetails.keyboardType = .emailAddress
+        self.txtEnterDetails.attributedPlaceholder = NSAttributedString(string: EMAIL, attributes: attributes)
+        self.txtEnterDetails.addTarget(self, action: #selector(self.enterSignUpEmail(_:)),for: .editingChanged)
+    }
+    
+    //MARK: - designSignUpPasswordCell
+    func designSignUpPasswordCell(){
+        self.btnHideShowPass.isHidden = false
+        self.txtEnterDetails.keyboardType = .emailAddress
+        self.txtEnterDetails.attributedPlaceholder = NSAttributedString(string: PASSWORD, attributes: attributes)
+        self.txtEnterDetails.addTarget(self, action: #selector(self.enterSignUpPassword(_:)),for: .editingChanged)
+    }
+    
+    //MARK: - enterSignUpName
+    @objc func enterSignUpName(_ textField: UITextField){
+        guard let text = textField.text else { return }
+        print(text)
+    }
+    
+    //MARK: - enterSignUpEmail
+    @objc func enterSignUpEmail(_ textField: UITextField){
+        guard let text = textField.text else { return }
+        print(text)
+    }
+    
+    //MARK: - enterSignUpPassword
+    @objc func enterSignUpPassword(_ textField: UITextField){
+        guard let text = textField.text else { return }
+        print(text)
+    }
+    
+    
     //MARK: - configureEmailPassswordCell
     func configureEmailPassswordCell(currentIndxPath: IndexPath){
         self.currentIndxPath = currentIndxPath
         switch currentIndxPath.row {
-        case 1:
+        case 2:
             self.designEmailCell()
             break
-        case 2:
+        case 3:
             self.designPasswordCell()
             break
         default:
@@ -57,7 +119,7 @@ class TextInputCell: UITableViewCell {
     
     //MARK: - designEmailCell
     func designEmailCell(){
-        self.btnHideShowPass.isHidden = true
+        
         self.txtEnterDetails.keyboardType = .emailAddress
         self.txtEnterDetails.attributedPlaceholder = NSAttributedString(string: EMAIL, attributes: attributes)
         self.txtEnterDetails.addTarget(self, action: #selector(self.enterEmailDidChange(_:)),for: .editingChanged)
@@ -65,6 +127,7 @@ class TextInputCell: UITableViewCell {
     
     //MARK: - designPasswordCell
     func designPasswordCell(){
+        self.btnHideShowPass.isHidden = false
         self.txtEnterDetails.isSecureTextEntry = isPasswordShow
         self.txtEnterDetails.attributedPlaceholder = NSAttributedString(string: PASSWORD, attributes: attributes)
         self.txtEnterDetails.addTarget(self, action: #selector(self.enterPassowrdDidChange(_:)),for: .editingChanged)
@@ -84,7 +147,7 @@ class TextInputCell: UITableViewCell {
     //MARK: - clickHideShowPasswordBtn
     @IBAction func clickHideShowPasswordBtn(_ sender: Any) {
         self.isPasswordShow = !self.isPasswordShow
-        if currentIndxPath.row == 2{
+        if currentIndxPath.row == 3{
             self.btnHideShowPass.isSelected = !self.isPasswordShow
             self.txtEnterDetails.isSecureTextEntry = self.isPasswordShow
         }

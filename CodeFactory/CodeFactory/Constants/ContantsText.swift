@@ -28,7 +28,9 @@ let SIGNUP = "Sign up"
 let EMAIL = "Email"
 let PASSWORD = "Password"
 
-
+///#SignUp Screen
+let SIGNUP_DESCRIPTION = "Create your account"
+let NAME = "Name"
 
 
 

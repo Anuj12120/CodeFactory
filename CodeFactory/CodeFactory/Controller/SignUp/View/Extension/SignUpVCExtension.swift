@@ -1,5 +1,5 @@
 //
-//  LoginVCExtension.swift
+//  SignUpVCExtension.swift
 //  CodeFactory
 //
 //  Created by Anuj on 11/01/25.
@@ -7,11 +7,13 @@
 
 import UIKit
 
-extension LoginViewController: UITableViewDelegate, UITableViewDataSource {
+
+extension SignUpViewController: UITableViewDelegate, UITableViewDataSource {
+    
     
     //MARK: - UITableView Delegate & DataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -21,7 +23,7 @@ extension LoginViewController: UITableViewDelegate, UITableViewDataSource {
                 let topLevelObjects: [Any] = Bundle.main.loadNibNamed("ShowImageCell", owner: self, options: nil)!
                 cell = (topLevelObjects[0] as? ShowImageCell)
             }
-            cell?.configureShowLoginImage()
+            cell?.configureShowSignUpImage()
             cell?.selectionStyle = .none
             return cell!
         }else if (indexPath.row == 1){
@@ -30,7 +32,7 @@ extension LoginViewController: UITableViewDelegate, UITableViewDataSource {
                 let topLevelObjects: [Any] = Bundle.main.loadNibNamed("LoginDetailCell", owner: self, options: nil)!
                 cell = (topLevelObjects[0] as? LoginDetailCell)
             }
-            cell?.configureLoginDetailCell()
+            cell?.configureSignUpDetailCell()
             cell?.selectionStyle = .none
             return cell!
         }else{
@@ -39,7 +41,7 @@ extension LoginViewController: UITableViewDelegate, UITableViewDataSource {
                 let topLevelObjects: [Any] = Bundle.main.loadNibNamed("TextInputCell", owner: self, options: nil)!
                 cell = (topLevelObjects[0] as? TextInputCell)
             }
-            cell?.configureEmailPassswordCell(currentIndxPath: indexPath)
+            cell?.configureSignUpDetails(currentIndxPath: indexPath)
             cell?.selectionStyle = .none
             return cell!
         }

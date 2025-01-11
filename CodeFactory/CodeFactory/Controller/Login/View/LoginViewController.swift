@@ -16,6 +16,10 @@ class LoginViewController: UIViewController {
     @IBOutlet var vwFooter: UIView!
     @IBOutlet weak var tableView: UITableView!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +53,8 @@ class LoginViewController: UIViewController {
     
     //MARK: - clickSignUpBtn
     @IBAction func clickSignUpBtn(_ sender: Any) {
+        let objController = SignUpViewController.init(nibName: "SignUpViewController", bundle: nil)
+        self.navigationController?.pushViewController(objController, animated: true)
     }
     
 }

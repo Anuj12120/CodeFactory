@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpViewController" customModule="CodeFactory" customModuleProvider="target">
+            <connections>
+                <outlet property="btnLogin" destination="Q0w-Of-8w5" id="Jm2-ZB-NKQ"/>
+                <outlet property="btnSingUp" destination="f1h-aw-qrl" id="M0T-H1-DwV"/>
+                <outlet property="tableView" destination="JSE-Bz-CBb" id="sm7-1i-Dwk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="vwFooter" destination="6xr-hm-esM" id="dp1-oR-uUp"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="JSE-Bz-CBb">
+                    <rect key="frame" x="0.0" y="131" width="393" height="687"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="ERd-r1-eSy"/>
+                        <outlet property="delegate" destination="-1" id="cO7-H3-zaW"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjQ-1g-wSY">
+                    <rect key="frame" x="16" y="75" width="48" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="5Aj-P6-Cgf"/>
+                        <constraint firstAttribute="width" constant="48" id="zFv-vn-aoR"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="icon_back"/>
+                    <connections>
+                        <action selector="clickBackBtn:" destination="-1" eventType="touchUpInside" id="u2t-Cu-NIT"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JSE-Bz-CBb" secondAttribute="trailing" id="2BH-Om-fuv"/>
+                <constraint firstItem="JSE-Bz-CBb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="E9x-7H-qTN"/>
+                <constraint firstItem="bjQ-1g-wSY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="FSq-ug-qks"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="JSE-Bz-CBb" secondAttribute="bottom" id="Z0o-7z-usd"/>
+                <constraint firstItem="JSE-Bz-CBb" firstAttribute="top" secondItem="bjQ-1g-wSY" secondAttribute="bottom" constant="8" id="fYc-2Y-t84"/>
+                <constraint firstItem="bjQ-1g-wSY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="mKJ-Wd-KVl"/>
+            </constraints>
+            <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
+        </view>
+        <view contentMode="scaleToFill" id="6xr-hm-esM">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="113"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1h-aw-qrl">
+                    <rect key="frame" x="16" y="8" width="361" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="Iw3-na-J4h"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="clickSignUpBtn:" destination="-1" eventType="touchUpInside" id="vmD-Fq-kkc"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q0w-Of-8w5">
+                    <rect key="frame" x="16" y="70" width="361" height="31"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="clickLoginBtn:" destination="-1" eventType="touchUpInside" id="xUU-9Q-jk6"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Q0w-Of-8w5" firstAttribute="leading" secondItem="6xr-hm-esM" secondAttribute="leading" constant="16" id="04s-Gm-sVQ"/>
+                <constraint firstItem="f1h-aw-qrl" firstAttribute="leading" secondItem="6xr-hm-esM" secondAttribute="leading" constant="16" id="1xw-Z2-Ksz"/>
+                <constraint firstAttribute="bottom" secondItem="Q0w-Of-8w5" secondAttribute="bottom" constant="12" id="2Ee-Db-zoZ"/>
+                <constraint firstItem="f1h-aw-qrl" firstAttribute="top" secondItem="6xr-hm-esM" secondAttribute="top" constant="8" id="4yz-VD-SBJ"/>
+                <constraint firstItem="Q0w-Of-8w5" firstAttribute="top" secondItem="f1h-aw-qrl" secondAttribute="bottom" constant="16" id="5Y1-59-1pF"/>
+                <constraint firstAttribute="trailing" secondItem="Q0w-Of-8w5" secondAttribute="trailing" constant="16" id="8gN-E8-7KN"/>
+                <constraint firstAttribute="trailing" secondItem="f1h-aw-qrl" secondAttribute="trailing" constant="16" id="liW-IL-chj"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="887.78625954198469" y="-271.47887323943661"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_back" width="48" height="48"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
