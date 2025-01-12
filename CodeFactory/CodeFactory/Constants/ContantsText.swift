@@ -51,7 +51,11 @@ let YOUR_COURSES = "Your Courses"
 let SCRUM = "Scrum"
 let SCRUM_DESCRIPTION = "Advanced project organization course"
 
-
+///#Profile Screen
+let YOUT_COURSE = "Your Courses"
+let SAVED = "Saved"
+let PAYMENT = "Payment"
+let LOGOUT = "Log out"
 
 //MARK: - FOR APP CONSTANTS
 let KEY_ONBORADING = "onboarding_key"

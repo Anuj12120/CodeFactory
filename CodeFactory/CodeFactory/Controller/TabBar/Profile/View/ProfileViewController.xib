@@ -1,22 +1,101 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="CodeFactory" customModuleProvider="target">
             <connections>
+                <outlet property="btnLogout" destination="bUf-lt-b5x" id="Xx2-M3-xvT"/>
+                <outlet property="imgLogo" destination="BSy-Pl-2Wh" id="mlI-FF-9jr"/>
+                <outlet property="tableView" destination="OLu-nP-0MR" id="fso-MN-ecm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="vwFooter" destination="Yb4-i6-LXC" id="TL8-y2-qHU"/>
+                <outlet property="vwHeader" destination="QBR-0R-2Nx" id="E0b-K3-R4D"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OLu-nP-0MR">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="kp6-rY-CNf"/>
+                        <outlet property="delegate" destination="-1" id="kXH-GA-VFk"/>
+                    </connections>
+                </tableView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="OLu-nP-0MR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="0va-Aj-oxW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="OLu-nP-0MR" secondAttribute="bottom" id="d5w-3D-WsY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="OLu-nP-0MR" secondAttribute="trailing" id="hm6-QJ-LGV"/>
+                <constraint firstItem="OLu-nP-0MR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="vSi-l9-jFO"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="-11"/>
+        </view>
+        <view contentMode="scaleToFill" id="Yb4-i6-LXC">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="36"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUf-lt-b5x">
+                    <rect key="frame" x="16" y="0.0" width="361" height="24"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Log out"/>
+                    <connections>
+                        <action selector="clickLogoutbtn:" destination="-1" eventType="touchUpInside" id="RTZ-nr-5i0"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="KMQ-Ng-ahP"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="bUf-lt-b5x" firstAttribute="leading" secondItem="KMQ-Ng-ahP" secondAttribute="leading" constant="16" id="9j4-il-gEE"/>
+                <constraint firstItem="bUf-lt-b5x" firstAttribute="top" secondItem="Yb4-i6-LXC" secondAttribute="top" id="dCV-da-eIf"/>
+                <constraint firstItem="KMQ-Ng-ahP" firstAttribute="trailing" secondItem="bUf-lt-b5x" secondAttribute="trailing" constant="16" id="pNS-V9-c8Q"/>
+                <constraint firstAttribute="bottom" secondItem="bUf-lt-b5x" secondAttribute="bottom" constant="12" id="yXm-lu-MOf"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="820.61068702290072" y="-301.40845070422534"/>
+        </view>
+        <view contentMode="scaleToFill" id="QBR-0R-2Nx">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="157"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_courese_logo" translatesAutoresizingMaskIntoConstraints="NO" id="BSy-Pl-2Wh">
+                    <rect key="frame" x="126.66666666666669" y="8" width="140" height="140"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="140" id="7OB-X8-yhI"/>
+                        <constraint firstAttribute="height" constant="140" id="nom-oy-kCe"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="BSy-Pl-2Wh" firstAttribute="top" secondItem="QBR-0R-2Nx" secondAttribute="top" constant="8" id="tHl-Iw-K7X"/>
+                <constraint firstItem="BSy-Pl-2Wh" firstAttribute="centerX" secondItem="QBR-0R-2Nx" secondAttribute="centerX" id="vHG-EK-jOl"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="821" y="-186"/>
         </view>
     </objects>
+    <resources>
+        <image name="ic_courese_logo" width="148.33332824707031" height="147"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

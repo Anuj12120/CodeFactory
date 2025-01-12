@@ -76,6 +76,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         
         tabBarC = SPXTabbarViewController()
         tabBarC?.tabBar.barTintColor = UICOLOR_BLACK
+        UITabBar.appearance().barTintColor = UICOLOR_WHITE
+        UITabBar.appearance().tintColor = UICOLOR_WHITE
+        UITabBar.appearance().isTranslucent = true
         //        tabBarC?.tabBar.barTintColor = UICOLOR_BLUE_LABEL_COLOR
         tabBarC?.viewControllers = [navC1, navC2, navC3]
         tabBarC?.delegate = self

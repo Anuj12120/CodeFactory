@@ -23,13 +23,13 @@ class CoursesCell: UITableViewCell {
         self.lblTimeLef.textColor = UICOLOR_CYAN_COLOR
         self.lblCourseName.font = OpanSansBold_Size32
         self.lblCourseName.textColor = UICOLOR_BLACK
-        self.lblCourseDescription.font = OpanSansRegular_Size21
+        self.lblCourseDescription.font = OpanSansRegular_Size15
         self.lblCourseDescription.textColor = UICOLOR_BLACK
         
         self.vwBack.backgroundColor = .clear
         self.vwBack.layer.cornerRadius = 10.0
         self.vwBack.layer.borderWidth = 1.0
-        self.vwBack.layer.borderColor = UICOLOR_BLACK.cgColor
+        self.vwBack.layer.borderColor = UICOLOR_TABAR_COLOR.cgColor
         
     }
 

@@ -16,6 +16,7 @@ class CoursesViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: false)
+        navigationController?.navigationBar.barTintColor = UICOLOR_APP_BACKGROUND_COLOR
     }
     
     override func viewDidLoad() {
