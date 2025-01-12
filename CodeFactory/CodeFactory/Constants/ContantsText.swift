@@ -44,8 +44,14 @@ let SETTINS = "Settings"
 
 
 ///#Courses Screen
-
+let LEFT_TIME = "Left 1 h 20 min"
+let SWIFT = "Swift"
+let SWIFT_COURSE_TYPE = "Advanced iOS apps"
 let YOUR_COURSES = "Your Courses"
+let SCRUM = "Scrum"
+let SCRUM_DESCRIPTION = "Advanced project organization course"
+
+
 
 //MARK: - FOR APP CONSTANTS
 let KEY_ONBORADING = "onboarding_key"
